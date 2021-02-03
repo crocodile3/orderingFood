@@ -8,6 +8,9 @@ from web.controllers.stat.Stat import route_stat
 from web.controllers.static import route_static
 from application import app
 
+from web.interceptors.AuthInterceptor import *
+from web.interceptors.ErrorInterceptor import *
+
 
 app.register_blueprint(route_index, url_prefix='/')
 app.register_blueprint(route_user, url_prefix='/user')
